@@ -11,6 +11,8 @@
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
+    "git": "^0.1.5",
+    "github": "^14.0.0",
     "nodemon": "^2.0.14"
   }
 }
