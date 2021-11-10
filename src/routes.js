@@ -9,6 +9,7 @@ const cadastroController = require('./controllers/cadastroController')
 // rotas da homepage (LOGIN)
 
 route.get('/', homeController.homepage);
+route.post('/', homeController.login)
 
 // rotas de cadastro
 route.get('/cadastro', cadastroController.index ); 
