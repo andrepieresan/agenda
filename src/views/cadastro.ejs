@@ -11,16 +11,21 @@
         
         <div class="col-md-8 col-lg-6">
           
-          <form method="POST" class="needs-validation" novalidate>
+          <form method="POST" class="needs-validation" >
             <div class="row g-3">
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Nome completo</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="" name="nome"  
+                required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                onchange="try{setCustomValidity('')}catch(e){}">
 
               </div> 
                <div class="col-sm-6">
-                <label for="number" class="form-label">Número de telefone</label>
-                <input type="text" class="form-control" id="number" placeholder="" value="" required>
+                <label for="telefone" class="form-label">Número de telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="" name="telefone" 
+                required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                onchange="try{setCustomValidity('')}catch(e){}"
+                >
 
               </div>
   
@@ -30,27 +35,31 @@
                 <label for="username" class="form-label">Usuário</label>
                 <div class="input-group has-validation">
                   <span class="input-group-text">@</span>
-                  <input type="text" class="form-control" id="username" placeholder="meunome" required>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="meunome" 
+                  required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                  onchange="try{setCustomValidity('')}catch(e){}">
               
                 </div>
               </div>
   
               <div class="col-12">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="voce@exemplo.com">
+                <input type="email" class="form-control" id="email" name="email" placeholder="voce@exemplo.com" 
+                >
                
               </div>
   
               <div class="col-12">
-                <label for="address" class="form-label">Endereço(opcional)</label>
-                <input type="text" class="form-control" id="address" placeholder="Rua conhecida, 240" required>
+                <label for="endereco" class="form-label">Endereço(opcional)</label>
+                <input type="text" class="form-control" id="endereco" name ="endereco" placeholder="Rua conhecida, 240" >
                
               </div>
   
   
               <div class="col-md-5">
-                <label for="country" class="form-label">País</label>
-                <select class="form-select" id="country" required>
+                <label for="pais" class="form-label">País</label>
+                <select class="form-select" id="pais" name="pais" required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                onchange="try{setCustomValidity('')}catch(e){}">
                   <option value="">Escolha...</option>
                   <option>Brasil</option>
                 </select>
@@ -58,8 +67,8 @@
               </div>
   
               <div class="col-md-4">
-                <label for="state" class="form-label">Estado(opcional)</label>
-                <select class="form-select" id="state" required>
+                <label for="estado" class="form-label">Estado(opcional)</label>
+                <select class="form-select" id="estado" name="estado">
                   <option value="">Escolha...</option>
                   <option>Paraná</option>
                 </select>
@@ -67,8 +76,8 @@
               </div>
   
               <div class="col-md-3">
-                <label for="zip" class="form-label">CEP(opcional)</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <label for="cep" class="form-label">CEP(opcional)</label>
+                <input type="text" class="form-control" id="cep" name="cep" placeholder="" >
                 
               </div>
             </div>
@@ -88,18 +97,19 @@
             <hr class="my-4">
   
             <h4 class="mb-3">Senha</h4>
-  
-       
-  
             <div class="row gy-3">
               <div class="col-md-6">
                 <label for="password" class="form-label">Digite sua senha:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="" 
+                required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                onchange="try{setCustomValidity('')}catch(e){}">
               </div>
   
               <div class="col-md-6">
                 <label for="password" class="form-label">Digite novamente sua senha:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="" required>
+                <input type="password" class="form-control" id="password" name="" placeholder="" 
+                required oninvalid="this.setCustomValidity('Campo obrigatório, preencha.')"
+                onchange="try{setCustomValidity('')}catch(e){}">
               </div>
             </div>
   

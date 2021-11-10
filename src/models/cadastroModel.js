@@ -1,8 +1,15 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const CadastroSchema = new mongoose.Schema({
+    nome: {type: String, required:true},
+    telefone: {type: String, required:true},
+    username: {type: String, required:true},
+    endereco: {type: String, required:true},
     email: { type: String, required: true},
-    senha: { type: String, required: true}
+    pais: { type: String, required: true},
+    estado: { type: String, required: true},
+    cep: { type: String, required: true},
+    password: { type: String, required: true},
     
 });
 
@@ -15,7 +22,7 @@ class Cadastro {
             this.user = null;
        }
 
-       
+
     async register(){
         this.valida();
         if (this.errors.lenght > 0) return;
@@ -45,7 +52,14 @@ class Cadastro {
     
     this.body = {
         email: this.body.email,
-        password: this.body.password
+        password: this.body.password,
+        nome: this.body.nome,
+        telefone: this.body.telefone,
+        username: this.body.username,
+        endereco: this.body.endereco,
+        pais: this.body.pais,
+        estado: this.body.estado,
+        cep: this.body.cep
     };
 }
 }
