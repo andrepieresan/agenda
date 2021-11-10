@@ -16,5 +16,5 @@ app.use (express.urlencoded({extended:true}));
 
 app.use(route);
 app.listen(3000, (req, res)=>{
-    console.log ("servidor online em 'localhost:3000'")
+    console.log ("Servidor atualizado e online em 'localhost:3000'")
 });

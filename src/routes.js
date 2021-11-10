@@ -11,8 +11,8 @@ const cadastroController = require('./controllers/cadastroController')
 route.get('/', homeController.homepage);
 
 // rotas de cadastro
-route.get('', cadastroController.index ); 
-
+route.get('/cadastro', cadastroController.index ); 
+route.post('/cadastro', cadastroController.register ); 
 
 
 // rotas de agenda (CRUD)
